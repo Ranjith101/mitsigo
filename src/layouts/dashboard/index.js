@@ -16,7 +16,6 @@ import ReactPlayer from "react-player";
 import Projects from "layouts/dashboard/components/Projects";
 import OrdersOverview from "layouts/dashboard/components/OrdersOverview";
 import DonutChart from "react-donut-chart";
-import Users from "./users";
 
 function Dashboard() {
   const { tasks } = reportsLineChartData;
@@ -81,7 +80,6 @@ function Dashboard() {
             </Grid>
             <Grid item xs={12} md={6} lg={4}>
               <OrdersOverview />
-              <Users />
             </Grid>
           </Grid>
         </MDBox>
