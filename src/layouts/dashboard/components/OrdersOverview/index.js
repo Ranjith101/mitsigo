@@ -40,7 +40,6 @@ function OrdersOverview() {
             <MDTypography variant="button" color="text" fontWeight="medium">
               24%
             </MDTypography>{" "}
-            this month
           </MDTypography>
         </MDBox>
       </MDBox>

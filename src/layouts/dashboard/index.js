@@ -10,13 +10,13 @@ import Footer from "examples/Footer";
 import ReportsLineChart from "examples/Charts/LineCharts/ReportsLineChart";
 
 // Data
-import reportsBarChartData from "layouts/dashboard/data/reportsBarChartData";
 import reportsLineChartData from "layouts/dashboard/data/reportsLineChartData";
 import ReactPlayer from "react-player";
 // Dashboard components
 import Projects from "layouts/dashboard/components/Projects";
 import OrdersOverview from "layouts/dashboard/components/OrdersOverview";
-import PieChart from "examples/Charts/PieChart/index";
+import DonutChart from "react-donut-chart";
+import Users from "./users";
 
 function Dashboard() {
   const { tasks } = reportsLineChartData;
@@ -29,13 +29,27 @@ function Dashboard() {
           <Grid container spacing={3}>
             <Grid item xs={12} md={6} lg={4}>
               <MDBox mb={3}>
-                <PieChart
-                  color="danger"
-                  title="website views"
-                  description="Last Campaign Performance"
-                  date="campaign sent 2 days ago"
-                  chart={reportsBarChartData}
+                <DonutChart
+                  data={[
+                    {
+                      label: "France",
+                      value: 4260,
+                    },
+                    {
+                      label: "Italy",
+                      value: 3970,
+                    },
+                    {
+                      label: "Canada",
+                      value: 3970,
+                    },
+                    {
+                      label: "Japan",
+                      value: 4260,
+                    },
+                  ]}
                 />
+                ;
               </MDBox>
             </Grid>
             <Grid item xs={12} md={6} lg={4}>
@@ -67,6 +81,7 @@ function Dashboard() {
             </Grid>
             <Grid item xs={12} md={6} lg={4}>
               <OrdersOverview />
+              <Users />
             </Grid>
           </Grid>
         </MDBox>
