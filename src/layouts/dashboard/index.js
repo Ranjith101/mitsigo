@@ -16,7 +16,7 @@ import ReactPlayer from "react-player";
 // Dashboard components
 import Projects from "layouts/dashboard/components/Projects";
 import OrdersOverview from "layouts/dashboard/components/OrdersOverview";
-import PieChart from "examples/Charts/PieChart";
+import PieChart from "examples/Charts/PieChart/index";
 
 function Dashboard() {
   const { tasks } = reportsLineChartData;
@@ -41,8 +41,9 @@ function Dashboard() {
             <Grid item xs={12} md={6} lg={4}>
               <MDBox mb={3}>
                 <ReactPlayer
-                  url="https://www.youtube.com/watch?v=ysz5S6PUM-U"
-                  light="../../assets/video thumbnail"
+                  url="https://www.youtube.com/watch?v=Oy6hk6Y7VHQ"
+                  width="100%"
+                  light="true"
                 />
               </MDBox>
             </Grid>
